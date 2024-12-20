@@ -20,6 +20,7 @@ app = Client(
 #Start command
 @app.on_message(filters.command("start"))
 async def start(client,message):
+    print('/start command recieved')
     await message.reply_text(
         text=Translation.START.format(name=message.from_user.first_name),
         reply_markup=InlineKeyboard.START,
