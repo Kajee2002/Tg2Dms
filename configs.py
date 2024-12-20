@@ -3,13 +3,13 @@ from google.colab import userdata
 
 class Configs(object):
     #Bot configurations
-    API_ID=userdata.get("API_ID", "")
-    API_HASH=userdata.get("API_HASH", "")
-    BOT_TOKEN=userdata.get("BOT_TOKEN", "")
+    API_ID=userdata.get("API_ID")
+    API_HASH=userdata.get("API_HASH")
+    BOT_TOKEN=userdata.get("BOT_TOKEN")
     
     #Dms configurations
-    UserName=userdata.get("UserName", "")
-    Password=userdata.get("Password", "")
+    UserName=userdata.get("UserName")
+    Password=userdata.get("Password")
     LoginDetail=f'userdata.get("UserName", ""):userdata.get("Password", "")'
     Header = '"OCS-APIRequest: true"'
     UploadPoint = '"https://dms.uom.lk/remote.php/webdav/"'
