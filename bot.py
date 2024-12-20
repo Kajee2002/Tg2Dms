@@ -1,6 +1,6 @@
 from pyrogram import Client, filters
 from pyrogram.errors import FloodWait
-
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 import time,os,json,sys
 import asyncio
 
@@ -26,13 +26,13 @@ async def start(client,message):
         reply_markup=InlineKeyboard.START,
     )
 
-@app.on_message(filters.command("help"))
-async def help(client, message):
-    print('/help command recieved')
-    await message.reply(
-        text=Translation.HELP,
-        reply_markup=InlineKeyboard.HELP,
-    )
+@app.on_message(filters.command("start"))
+async def start(client,message):
+  inline_keyboard3 = InlineKeyboardMarkup([
+      [InlineKeyboardButton('Bulk Upload', callback_data='bulkupload'), InlineKeyboardButton('DMS details', callback_data='dms')],
+      [InlineKeyboardButton('Cancel', callback_data='cancel')]
+  ])
+  await message.reply_text(f"Hello {message.from_user.first_name}!\n I'm able to move your telegram files to DMS UoM.",reply_to_message_id=message.id,reply_markup=inline_keyboard3)
 
 @app.on_message(filters.document)
 async def download(client, message):
