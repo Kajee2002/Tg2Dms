@@ -1,4 +1,4 @@
-from google.colab import userdata
+from google.colab import userdata as userdata
 
 
 class Configs(object):
