@@ -33,6 +33,11 @@ async def help(client, message):
         text=Translation.HELP,
         reply_markup=InlineKeyboard.HELP,
     )
+
+@app.on_message(filters.document)
+async def download(client, message):
+    print('Document recieved')
+    await message.reply(Translation.DOWNLOADING)
  
 #MAIN function
 async def main():
