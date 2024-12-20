@@ -24,12 +24,11 @@ async def start(client,message):
         text=Translation.START.format(name=message.from_user.first_name),
         reply_markup=InlineKeyboard.START,
         parse_mode="html",
-        quote=True
     )
 
 
 
-
+ 
 #MAIN function
 async def main():
     async with app:
@@ -48,4 +47,3 @@ if __name__ == "__main__":
         asyncio.run(main())
     except:
         print("An error occured.")
-        sys.exit(1)
