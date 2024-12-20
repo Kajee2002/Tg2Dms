@@ -8,7 +8,7 @@ class Translation(object):
     ABOUT="Bot made by Kajatheepan. \n Source code: <a href='link'>GitHub</a>"
 
 
-from pyrogram import InlineKeyboardMarkup, InlineKeyboardButton
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 class InlineKeyboard(object):
     START=InlineKeyboardMarkup(
@@ -29,4 +29,3 @@ class InlineKeyboard(object):
         InlineKeyboardButton('Back', callback_data='start')
         ]]
     )
-    
