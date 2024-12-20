@@ -26,8 +26,13 @@ async def start(client,message):
         reply_markup=InlineKeyboard.START,
     )
 
-
-
+@app.on_message(filters.text('help'))
+async def init(client,message):
+    print('/help command recieved')
+    await message.reply(
+        text=Translation.HELP,
+        reply_markup=InlineKeyboard.HELP,
+    )
  
 #MAIN function
 async def main():

@@ -6,7 +6,7 @@ class Translation(object):
     UPLOADED="Uploaded successfully to DMS!"
     HELP="Just forward a file to me, I'll do the rest!"
     ABOUT="Bot made by Kajatheepan. \n Source code: <a href='link'>GitHub</a>"
-
+    
 
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
