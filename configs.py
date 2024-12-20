@@ -3,7 +3,7 @@ from google.colab import userdata as userdata
 
 class Configs(object):
     #Bot configurations
-    API_ID=userdata.get("API_ID")
+    API_ID=int(userdata.get("API_ID"))
     API_HASH=userdata.get("API_HASH")
     BOT_TOKEN=userdata.get("BOT_TOKEN")
     
