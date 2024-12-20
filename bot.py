@@ -23,7 +23,6 @@ async def start(client,message):
     await message.reply_text(
         text=Translation.START.format(name=message.from_user.first_name),
         reply_markup=InlineKeyboard.START,
-        parse_mode="html",
     )
 
 
