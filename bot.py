@@ -1,7 +1,8 @@
 from pyrogram import Client, filters
 from pyrogram.errors import FloodWait
 
-import time,os,json,asyncio,sys
+import time,os,json,sys
+import asyncio
 
 from configs import Configs
 from translation import InlineKeyboard, Translation
@@ -26,3 +27,19 @@ async def start(client,message):
         quote=True
     )
 
+
+
+
+#MAIN function
+async def main():
+    async with app:
+        print("Client started. Listening for messages...")
+        try:
+          await asyncio.Event().wait()  # Keeps the client running
+        except:
+          print("Client stopped.")
+
+
+# Start the asyncio loop
+if __name__ == "__main__":
+    asyncio.run(main())
